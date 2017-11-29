@@ -9,7 +9,7 @@
 
 `ystart init`
 
-根据命令创建项目名称及htdocs目录
+根据命令创建项目名称
 
 `cd 项目目录 && npm install || cnpm install`
 
