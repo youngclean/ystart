@@ -40,8 +40,8 @@ module.exports = () => {
       console.log(chalk.red("Project has already existed!"));
       process.exit();
     }
-
-    const cmdStr = `git clone ${gitUrl} && mv creditcloudfrontendstage ${projectName}`;
+    // 修改download下来的仓库名为项目目录名
+    const cmdStr = `git clone ${gitUrl} && mv webpack-hot-demo ${projectName}`;
 
     console.log(chalk.white("\n Start generating..."));
 
