@@ -52,6 +52,7 @@ module.exports = () => {
       shelljs.rm("-rf", `${projectDir}/.git`);
       console.log(chalk.green("\n √ Generation completed!"));
       console.log(`\n cd ${projectName} && npm install || cnpm install \n`)
+      process.exit();
     });
   });
 };
