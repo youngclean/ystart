@@ -1,0 +1,32 @@
+{
+  "name": "ystart",
+  "version": "0.0.1",
+  "description": "简易脚手架",
+  "main": "bin/ystart",
+  "bin": {
+    "ystart": "./bin/ystart"
+  },
+  "scripts": {
+    "test": "node bin/ystart"
+  },
+  "dependencies": {
+    "chalk": "^2.2.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.11.0",
+    "shelljs": "^0.7.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngclean/ystart.git"
+  },
+  "keywords": [
+    "ystart"
+  ],
+  "author": "youngclean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngclean/ystart/issues"
+  },
+  "homepage": "https://github.com/youngclean/ystart#readme"
+}
