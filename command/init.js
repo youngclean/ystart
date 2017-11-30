@@ -29,8 +29,7 @@ module.exports = () => {
   co(function*() {
     // 处理用户输入
     const projectName = yield prompt("Project name: ");
-    const gitUrl =
-      "https://github.com/youngclean/webpack-hot-demo.git";
+    const gitUrl = "https://github.com/youngclean/webpack-hot-demo.git";
 
     // 避免重复添加
     if (!config.project[projectName]) {
@@ -50,9 +49,25 @@ module.exports = () => {
       const projectDir = `${currentDir}/${projectName}`;
       // 删除git信息
       shelljs.rm("-rf", `${projectDir}/.git`);
+      // 修改 package.json的name
+      const pkgDir = `${projectDir}/package.json`;
+      fs.readFile(pkgDir, "utf8", (err, data) => {
+        if (err) throw err;
+        let pkg = JSON.parse(data);
+        pkg.name = projectName;
+        pkg.version = "0.1.0";
+        pkg = JSON.stringify(pkg, null, 2);
+        fs.writeFileSync(pkgDir, pkg, "utf8", err => {
+          if (err) console.log(err);
+          process.exit();
+        });
+        process.exit();
+      });
+      
       console.log(chalk.green("\n √ Generation completed!"));
-      console.log(`\n cd ${projectName} && npm install || cnpm install \n`)
-      process.exit();
+      console.log(`\n cd ${projectName} && npm install || cnpm install \n`);
     });
+
+
   });
 };
