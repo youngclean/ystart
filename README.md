@@ -5,14 +5,14 @@
 `npm install ystart -g || cnpm install ystart -g`
 
 ## 使用
-在要开发代码的根目录下运行
+在某一个目录下运行
 
 `ystart init`
 
-根据命令创建项目名称
+根据提示命令创建项目，结束后
 
-`cd 项目目录 && npm install || cnpm install`
+`cd 项目目录`
 
-下载完所有包后，启动本地开发环境
+启动本地开发环境
 
 `npm start`
