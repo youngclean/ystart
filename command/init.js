@@ -25,7 +25,7 @@ const execPromise = (command) => {
 
 const endFun = (projectName) => {
   console.log(chalk.green("\n √ Generation completed!"));
-  console.log(chalk.bold(`\n Next: cd ${projectName}`));
+  console.log(chalk.bold(`\n Next: cd ${projectName} && npm start`));
   process.exit();
 }
 
